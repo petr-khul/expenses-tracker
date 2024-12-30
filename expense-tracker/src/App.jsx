@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import Income from "./Income";
+import Expense from "./Expense";
+import Overview from "./Overview";
 
 import './App.css'
 
@@ -21,7 +24,11 @@ function App() {
 
   return (
     <>
-
+      <div classname="main-root">
+        <Income />
+        <Expense />
+        <Overview />
+      </div>
     </>
   )
 }
