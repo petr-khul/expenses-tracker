@@ -1,0 +1,48 @@
+.income {
+    border: 1px solid hsla(0, 0%, 30%, 0.9);
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    padding: 10px 30px;
+    margin: 10px;
+    background-color: hsla(115, 90%, 59%, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.incomeCategory{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #121212;
+}
+
+.input, .addIncome {
+    margin: 5px 0px;
+    min-height: 25px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.addIncome {
+    background-color: hsla(120, 100%, 50%, 0.3);
+    cursor: pointer;
+}
+
+.incomeType {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5px 0px;
+    border: 1px solid hsla(0, 0%, 30%, 0.9);
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #121212;
+}
+
+.incomeNote {
+    resize: none;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #121212;
+}

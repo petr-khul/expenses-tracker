@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <div classname="main-root">
+      <div className="main-root">
         <Income />
         <Expense />
         <Overview />
