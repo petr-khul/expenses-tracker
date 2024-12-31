@@ -56,8 +56,8 @@ function Income(props){
         }
         
         // log to console for debugging purposes
-        console.log(newIncomeRecord); 
-        console.log(records);
+        //console.log(newIncomeRecord); 
+        //console.log(records);
 
         // Save the record and update the state in the parent
         saveRecords(newIncomeRecord).then((success) => {
