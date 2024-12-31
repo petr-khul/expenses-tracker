@@ -9,6 +9,9 @@ function App() {
   const [expenses, setExpenses] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  let nextId = expenses.length + 1;
+
+
   //load expenses from json file
   useEffect(() => {
     fetch("http://localhost:3001/expenses")
@@ -36,6 +39,7 @@ function App() {
         console.error("prevExpenses is not an array:", prevExpenses);
         return [newExpense]; // Fallback to a new array
       }
+
       return [...prevExpenses, newExpense];
     });
   };
@@ -56,7 +60,7 @@ function App() {
         <div className="header">
           <h1>💸 Cool Expense Tracker 💰</h1>
           </div>
-          {!isLoading ? <Income expenses={expenses} updateExpenses={updateExpenses} /> : <p>Loading...</p>}
+          {!isLoading ? <Income expenses={expenses} updateExpenses={updateExpenses} id={nextId}/> : <p>Loading...</p>}
         <Expense />
         <Overview />
       </div>

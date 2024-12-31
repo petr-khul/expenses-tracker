@@ -8,9 +8,52 @@
   },
   {
     "transactionType": "Income",
-    "incomeAmount": "90",
+    "incomeAmount": "555",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "transactionType": "Income",
+    "incomeAmount": "111",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "transactionType": "Income",
+    "incomeAmount": "12",
     "incomeDate": "2024-12-31",
     "incomeType": "Cash",
+    "incomeNote": ""
+  },
+  {
+    "transactionType": "Income",
+    "incomeAmount": "1",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "transactionType": "Income",
+    "incomeAmount": "4321",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cash",
+    "incomeNote": ""
+  },
+  {
+    "transactionType": "Income",
+    "incomeAmount": "1",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "id": 8,
+    "transactionType": "Income",
+    "incomeAmount": "098765432",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cashless",
     "incomeNote": ""
   }
 ]

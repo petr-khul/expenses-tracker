@@ -2,7 +2,6 @@ async function saveRecords(newRecord){
     //const id = records.length+1;
     //console.log(id);
 
-    console.log("in handler" +newRecord); //for debugging
     let jsonString = JSON.stringify(newRecord)
     
     try {

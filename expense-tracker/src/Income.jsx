@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import styles from "./Income.module.css";
 import saveRecords from "./handlers";
 
@@ -6,12 +6,18 @@ function Income(props){
     const today = new Date().toISOString().split('T')[0];
 
     const records = props.expenses;
+    //const id = props.nextId;
     
     const [incomeCategory, setIncomeCategory] = useState("");
     const [incomeAmount, setIncomeAmount] = useState("");
     const [incomeDate, setIncomeDate] = useState(today);
     const [incomeType, setIncomeType] = useState("");
     const [incomeNote, setIncomeNote] = useState("");
+    const [nextId, setNextId] = useState(records.length + 1);
+
+    useEffect(() => {
+        setNextId(records.length + 1);
+    }, [records]);
 
 
     const handleIncomeCategoryChange = (event) => {
@@ -41,7 +47,7 @@ function Income(props){
 
         //creates new object to be added into array
         const newIncomeRecord = {
-            //id: {id}, being handled in separate file
+            id: nextId,
             transactionType: transactionType,
             incomeAmount: incomeAmount,
             incomeDate: incomeDate,
