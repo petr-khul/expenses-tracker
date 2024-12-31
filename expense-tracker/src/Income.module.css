@@ -8,25 +8,40 @@
     background-color: hsla(115, 90%, 59%, 0.1);
     border-radius: 15px;
     text-align: center;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
 }
 
+.incomeForm {
+    max-width: 250px;
+}
 
-.incomeCategory{
+.input, .addIncome, .incomeType, .incomeNote, .incomeCategory {
+    width: 90%;
     padding: 10px;
     border-radius: 15px;
     background-color: #121212;
-}
-
-.input, .addIncome {
     margin: 5px 0px;
     min-height: 25px;
-    border-radius: 15px;
-    padding: 10px;
 }
+
+.incomeCategory {
+    width: 100%;
+}
+
 
 .addIncome {
     background-color: hsla(120, 100%, 50%, 0.3);
     cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.addIncome:hover {
+    background-color: hsla(120, 100%, 45%, 0.3);
+    cursor: pointer;
+    transform: scale(1.01);
 }
 
 .incomeType {
@@ -42,7 +57,4 @@
 
 .incomeNote {
     resize: none;
-    border-radius: 15px;
-    padding: 10px;
-    background-color: #121212;
 }

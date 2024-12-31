@@ -25,6 +25,9 @@ function App() {
   return (
     <>
       <div className="main-root">
+        <div className="header">
+          <h1>💸 Cool Expense Tracker 💰</h1>
+          </div>
         <Income />
         <Expense />
         <Overview />

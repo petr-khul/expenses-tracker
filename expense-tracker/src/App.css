@@ -1,0 +1,28 @@
+.main-root {
+  border: 2px solid hsla(0, 0%, 30%, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 15px;
+  text-transform: uppercase;
+  height: 100%;
+  padding: 25px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  border: 1px solid hsla(0, 0%, 30%, 0.9);
+  border-radius: 15px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: hsla(241, 100%, 11%, 0.3);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}

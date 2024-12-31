@@ -31,75 +31,91 @@ function Income(){
         setIncomeNote(event.target.value);
     }
 
+    const handleIncomeSubmit = (event) => {
+        event.preventDefault();
+        const transactionType = "Income";
+
+        const income = {
+            type: {transactionType},
+            
+        }
+    }
+
 
     return (
         <div className={styles.income}>
             
             <h3>Add an Income</h3>
 
-            <select className={styles.incomeCategory} 
-                id="income-category" 
-                value={incomeCategory} 
-                onChange={handleIncomeCategoryChange}>
-                    <option value="">-- Select an Income Category --</option>  {/* Default empty option */}
-                    <option value="Salary">Salary</option>
-                    <option value="Side hustle">Side hustle</option>
-                    <option value="Business income">Business income</option>
-                    <option value="Pension or retirement">Pension or Retirement</option>
-                    <option value="Gift">Gift</option>
-                    <option value="Other">Other</option>
-            </select>
+            <form onSubmit={handleIncomeSubmit} className={styles.incomeForm}>
+                <select className={styles.incomeCategory} 
+                    id="income-category" 
+                    value={incomeCategory} 
+                    onChange={handleIncomeCategoryChange}
+                    required>
+                        <option value="">-- Select an Income Category --</option>  {/* Default empty option */}
+                        <option value="Salary">Salary</option>
+                        <option value="Side hustle">Side hustle</option>
+                        <option value="Business income">Business income</option>
+                        <option value="Pension or retirement">Pension or Retirement</option>
+                        <option value="Gift">Gift</option>
+                        <option value="Other">Other</option>
+                </select>
 
-            <input type="number" 
-                className={styles.input} 
-                min={0} 
-                placeholder="Enter a amount..." 
-                value={incomeAmount} 
-                onChange={handleIncomeAmountChange} />
+                <input type="number" 
+                    className={styles.input} 
+                    min={0} 
+                    placeholder="Enter an amount..." 
+                    value={incomeAmount} 
+                    onChange={handleIncomeAmountChange} 
+                    required 
+                />
 
-            <input
-                className={styles.input} 
-                type="date"
-                id="dateInput"
-                value={incomeDate}
-                onChange={handleIncomeDateChange}
-            />
+                <input
+                    className={styles.input} 
+                    type="date"
+                    id="dateInput"
+                    value={incomeDate}
+                    onChange={handleIncomeDateChange}
+                    required
+                />
 
-            <div className={styles.incomeType}>
-                <label>
-                    <input
-                    type="radio"
-                    name="incomeType"
-                    value="Cashless"
-                    checked={incomeType === 'Cashless'}
-                    onChange={handleIncomeTypeChange}
-                    />
-                    Cashless
-                </label>
-                <br />
-                <label>
-                    <input
+                <div className={styles.incomeType}>
+                    <label>
+                        <input
                         type="radio"
                         name="incomeType"
-                        value="Cash"
-                        checked={incomeType === 'Cash'}
+                        value="Cashless"
+                        checked={incomeType === 'Cashless'}
                         onChange={handleIncomeTypeChange}
-                    />
-                    Cash
-                </label>
-            </div>
+                        />
+                        Cashless
+                    </label>
+                    <br />
+                    <label>
+                        <input
+                            type="radio"
+                            name="incomeType"
+                            value="Cash"
+                            checked={incomeType === 'Cash'}
+                            onChange={handleIncomeTypeChange}
+                        />
+                        Cash
+                    </label>
+                </div>
 
-            <textarea
-                    className={styles.incomeNote}
-                    value={incomeNote}
-                    onChange={handleIncomeNoteChange}
-                    placeholder="Notes..."
-                    rows="5"
-                    cols="50"
-            />
+                <textarea
+                        className={styles.incomeNote}
+                        value={incomeNote}
+                        onChange={handleIncomeNoteChange}
+                        placeholder="Notes..."
+                        rows="5"
+                        cols="50"
+                />
 
-            <button className={styles.addIncome} type="submit">Add income</button>    
-        
+                <button className={styles.addIncome} type="submit" onClick={handleIncomeSubmit}>Add income</button>    
+
+            </form>
         </div>
     )
 }
