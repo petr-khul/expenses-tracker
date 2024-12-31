@@ -1,13 +1,16 @@
 import React, {useState} from "react";
 import styles from "./Income.module.css";
+import saveRecords from "./handlers";
 
-function Income(){
+function Income(props){
     const today = new Date().toISOString().split('T')[0];
+
+    const records = props.expenses;
     
     const [incomeCategory, setIncomeCategory] = useState("");
-    const [incomeAmount, setIncomeAmount] = useState();
+    const [incomeAmount, setIncomeAmount] = useState("");
     const [incomeDate, setIncomeDate] = useState(today);
-    const [incomeType, setIncomeType] = useState();
+    const [incomeType, setIncomeType] = useState("");
     const [incomeNote, setIncomeNote] = useState("");
 
 
@@ -33,12 +36,37 @@ function Income(){
 
     const handleIncomeSubmit = (event) => {
         event.preventDefault();
-        const transactionType = "Income";
+        const transactionType = "Income"; //default transaction type for incomes
 
-        const income = {
-            type: {transactionType},
-            
+
+        //creates new object to be added into array
+        const newIncomeRecord = {
+            //id: {id}, being handled in separate file
+            transactionType: transactionType,
+            incomeAmount: incomeAmount,
+            incomeDate: incomeDate,
+            incomeType: incomeType,
+            incomeNote: incomeNote
         }
+        
+        // log to console for debugging purposes
+        console.log(newIncomeRecord); 
+        console.log(records);
+
+        // Save the record and update the state in the parent
+        saveRecords(newIncomeRecord).then((success) => {
+            if (success) {
+                props.updateExpenses(newIncomeRecord); // Only update on success
+            }
+        });
+            
+
+         // Reset the form fields after submitting
+        setIncomeCategory("");
+        setIncomeAmount("");
+        setIncomeDate(today);
+        setIncomeType("");
+        setIncomeNote("");
     }
 
 
@@ -65,7 +93,7 @@ function Income(){
                 <input type="number" 
                     className={styles.input} 
                     min={0} 
-                    placeholder="Enter an amount..." 
+                    placeholder="Enter an amount in CZK" 
                     value={incomeAmount} 
                     onChange={handleIncomeAmountChange} 
                     required 
@@ -113,7 +141,7 @@ function Income(){
                         cols="50"
                 />
 
-                <button className={styles.addIncome} type="submit" onClick={handleIncomeSubmit}>Add income</button>    
+                <button className={styles.addIncome} type="submit" >Add income</button>    
 
             </form>
         </div>

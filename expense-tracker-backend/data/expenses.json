@@ -1,8 +1,16 @@
 [
   {
-    "id": 1,
-    "amount": 50,
-    "category": "Fuel",
-    "description": "Refuel"
+    "transactionType": "Income",
+    "incomeAmount": "1",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "transactionType": "Income",
+    "incomeAmount": "90",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cash",
+    "incomeNote": ""
   }
 ]

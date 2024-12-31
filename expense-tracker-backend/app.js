@@ -13,23 +13,42 @@ app.use(express.json());
 app.get("/expenses", (req, res) => {
   try {
     const data = fs.readFileSync(filePath, "utf8");
-    const jsonData = JSON.parse(data || "[]");
-    res.json(jsonData);
+    const jsonData = JSON.parse(data || "[]"); // Ensure fallback to an empty array
+    res.json(Array.isArray(jsonData) ? jsonData : []); // Ensure it's always an array
   } catch (err) {
     console.error("Error reading expenses file:", err.message);
     res.status(500).send("Error reading expenses file.");
   }
 });
 
-
 // Write expenses
-app.post("/expenses", (req, res) => {
+app.post('/expenses', (req, res) => {
   try {
-    const expenses = req.body;
-    fs.writeFileSync(filePath, JSON.stringify(expenses, null, 2));
-    res.status(200).send("Expenses saved!");
-  } catch (err) {
-    res.status(500).send("Error saving expenses.");
+      const newRecord = req.body;
+
+      // Read the existing data from the JSON file
+      const fileContent = fs.existsSync(filePath) 
+          ? fs.readFileSync(filePath, 'utf-8') 
+          : '[]';
+
+      const data = JSON.parse(fileContent);
+
+      // Ensure the file contains an array
+      if (!Array.isArray(data)) {
+          throw new Error('Data in expenses.json is not an array');
+      }
+
+      // Append the new record
+      data.push(newRecord);
+
+      // Write back the updated data
+      fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+
+      console.log('Record added successfully:', newRecord);
+      res.status(201).send({ message: 'Record added successfully', newRecord });
+  } catch (error) {
+      console.error('Error saving expense:', error);
+      res.status(500).send({ message: 'Failed to save expense' });
   }
 });
 
