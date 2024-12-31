@@ -44,7 +44,7 @@ app.post('/expenses', (req, res) => {
       // Write back the updated data
       fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
 
-      console.log('Record added successfully:', newRecord);
+      //console.log('Record added successfully:', newRecord);
       res.status(201).send({ message: 'Record added successfully', newRecord });
   } catch (error) {
       console.error('Error saving expense:', error);

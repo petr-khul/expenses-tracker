@@ -3,10 +3,9 @@ import styles from "./Income.module.css";
 import saveRecords from "./handlers";
 
 function Income(props){
-    const today = new Date().toISOString().split('T')[0];
+    const today = new Date().toISOString().split('T')[0]; //for date initial state
 
-    const records = props.expenses;
-    //const id = props.nextId;
+    const records = props.expenses; //assigns value
     
     const [incomeCategory, setIncomeCategory] = useState("");
     const [incomeAmount, setIncomeAmount] = useState("");
@@ -15,6 +14,7 @@ function Income(props){
     const [incomeNote, setIncomeNote] = useState("");
     const [nextId, setNextId] = useState(records.length + 1);
 
+    //dynamically udpates the id
     useEffect(() => {
         setNextId(records.length + 1);
     }, [records]);

@@ -9,7 +9,7 @@ function App() {
   const [expenses, setExpenses] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  let nextId = expenses.length + 1;
+  let nextId = expenses.length + 1; // sets ID of next record and sends as a prop
 
 
   //load expenses from json file
@@ -33,6 +33,7 @@ function App() {
   }, []);
   
 
+  //update after adding new record
   const updateExpenses = (newExpense) => {
     setExpenses((prevExpenses) => {
       if (!Array.isArray(prevExpenses)) {
@@ -59,10 +60,12 @@ function App() {
       <div className="main-root">
         <div className="header">
           <h1>💸 Cool Expense Tracker 💰</h1>
-          </div>
-          {!isLoading ? <Income expenses={expenses} updateExpenses={updateExpenses} id={nextId}/> : <p>Loading...</p>}
-        <Expense />
-        <Overview />
+        </div>
+        <div className="main-modules">
+            {!isLoading ? <Income expenses={expenses} updateExpenses={updateExpenses} id={nextId}/> : <p>Loading...</p>}
+          <Expense expenses={expenses} updateExpenses={updateExpenses} id={nextId}/>
+          <Overview />
+        </div>
       </div>
     </>
   )

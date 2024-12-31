@@ -55,5 +55,29 @@
     "incomeDate": "2024-12-31",
     "incomeType": "Cashless",
     "incomeNote": ""
+  },
+  {
+    "id": 9,
+    "transactionType": "Income",
+    "incomeAmount": "111",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cashless",
+    "incomeNote": "21"
+  },
+  {
+    "id": 10,
+    "transactionType": "Income",
+    "incomeAmount": "2222",
+    "incomeDate": "2024-12-31",
+    "incomeType": "Cash",
+    "incomeNote": ""
+  },
+  {
+    "id": 11,
+    "transactionType": "Expense",
+    "expenseAmount": "222",
+    "expenseDate": "2024-12-31",
+    "expenseType": "BT",
+    "expenseNote": ""
   }
 ]
