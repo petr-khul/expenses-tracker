@@ -49,8 +49,9 @@ function Income(props){
         const newIncomeRecord = {
             id: nextId,
             transactionType: transactionType,
-            incomeAmount: incomeAmount,
-            incomeDate: incomeDate,
+            category: incomeCategory,
+            amount: incomeAmount,
+            date: incomeDate,
             incomeType: incomeType,
             incomeNote: incomeNote
         }

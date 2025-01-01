@@ -48,8 +48,9 @@ function Expense(props){
         const newExpenseRecord = {
             id: nextId,
             transactionType: transactionType,
-            expenseAmount: expenseAmount,
-            expenseDate: expenseDate,
+            category: expenseCategory,
+            amount: expenseAmount,
+            date: expenseDate,
             expenseType: expenseType,
             expenseNote: expenseNote
         }

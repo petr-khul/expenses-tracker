@@ -44,6 +44,25 @@ function App() {
       return [...prevExpenses, newExpense];
     });
   };
+
+    // Delete an expense and update the state
+    const deleteExpense = (id) => {
+      // Send a DELETE request to the API
+      fetch(`http://localhost:3001/expenses/${id}`, {
+        method: 'DELETE',
+      })
+        .then((response) => {
+          if (response.ok) {
+            // If the request was successful, remove the expense from the local state
+            setExpenses((prevExpenses) => prevExpenses.filter((expense) => expense.id !== id));
+          } else {
+            console.error("Failed to delete expense");
+          }
+        })
+        .catch((error) => {
+          console.error("Error deleting expense:", error);
+        });
+    };
   
 
 
@@ -62,9 +81,9 @@ function App() {
           <h1>💸 Cool Expense Tracker 💰</h1>
         </div>
         <div className="main-modules">
-            {!isLoading ? <Income expenses={expenses} updateExpenses={updateExpenses} id={nextId}/> : <p>Loading...</p>}
+          {!isLoading ? <Income expenses={expenses} updateExpenses={updateExpenses} id={nextId}/> : <p>Loading...</p>}
           <Expense expenses={expenses} updateExpenses={updateExpenses} id={nextId}/>
-          <Overview />
+          {!isLoading ? <Overview expenses={expenses} updateExpenses={updateExpenses} deleteExpense={deleteExpense} /> : <p>Loading...</p>}
         </div>
       </div>
     </>

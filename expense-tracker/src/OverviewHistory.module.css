@@ -1,0 +1,86 @@
+.overviewHistory {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid hsla(0, 0%, 30%, 0.9);
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    flex-grow: 1; 
+    justify-content: flex-start;
+    padding: 10px 30px;
+    margin: 10px;
+    margin-right: 0px;
+    background-color: hsla(234, 90%, 35%, 0.1);
+    text-align: center;
+    min-height: 450px;
+}
+
+.overviewHistory::-webkit-scrollbar {
+    width: 8px; /* Width of the vertical scrollbar */
+    height: 8px; /* Height of the horizontal scrollbar */
+  }
+  
+  /* Style the track (the area the scrollbar slides within) */
+  .overviewHistory::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey background */
+    border-radius: 10px;
+  }
+  
+  /* Style the handle (the draggable part of the scrollbar) */
+  .overviewHistory::-webkit-scrollbar-thumb {
+    background: #888; /* Darker grey for the scrollbar thumb */
+    border-radius: 10px;
+  }
+  
+  /* Style the handle on hover */
+  .overviewHistory::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker grey when hovered */
+  }
+
+.boxHeader {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.income {
+    color: hsla(120, 100%, 50%, 0.5);
+    font-weight: bolder;
+}
+  
+.expense {
+    color: hsla(0, 100%, 55%, 0.6);
+    font-weight: bolder;
+}
+
+.overviewHistory ul {
+    padding: 0 10px;
+    margin: 0; 
+}
+
+.overviewHistory ul li {
+    text-align: justify;
+    text-transform: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul li:first-child {
+    border-bottom: 1px solid #ccc; /* Separator line after each item */
+    padding-bottom: 10px; /* Adjust space after the content */
+    padding-top: 0;
+}
+
+ul li {
+    border-bottom: 1px solid #ccc; /* Separator line after each item */
+    padding-bottom: 10px; /* Adjust space after the content */
+    padding-top: 10px;
+}
+
+  
+ul li:last-child {
+    border-bottom: none; /* Remove separator after the last item */
+}

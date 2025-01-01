@@ -52,6 +52,41 @@ app.post('/expenses', (req, res) => {
   }
 });
 
+// DELETE expense based on ID
+app.delete("/expenses/id", (req, res) => {
+  const expenseId = parseInt(req.params.id);
+
+  if (isNaN(expenseId)) {
+    return res.status(400).send({ message: "Invalid ID format" });
+  }
+
+  try {
+    const fileContent = fs.existsSync(filePath) 
+        ? fs.readFileSync(filePath, 'utf-8') 
+        : '[]';
+
+    const data = JSON.parse(fileContent);
+
+    // Find the index of the expense to delete
+    const index = data.findIndex((expense) => expense.id === expenseId);
+
+    if (index === -1) {
+      return res.status(404).send({ message: "Expense not found" });
+    }
+
+    // Remove the expense
+    data.splice(index, 1);
+
+    // Write back the updated data
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+
+    res.status(200).send({ message: 'Expense deleted successfully' });
+  } catch (err) {
+    console.error("Error deleting expense:", err.message);
+    res.status(500).send({ message: "Error deleting expense" });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
