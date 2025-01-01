@@ -1,83 +1,38 @@
 [
   {
+    "id": 1,
     "transactionType": "Income",
-    "incomeAmount": "1",
-    "incomeDate": "2024-12-31",
+    "category": "Salary",
+    "amount": "20000",
+    "date": "2025-01-01",
     "incomeType": "Cashless",
     "incomeNote": ""
   },
   {
-    "transactionType": "Income",
-    "incomeAmount": "555",
-    "incomeDate": "2024-12-31",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "transactionType": "Income",
-    "incomeAmount": "111",
-    "incomeDate": "2024-12-31",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "transactionType": "Income",
-    "incomeAmount": "12",
-    "incomeDate": "2024-12-31",
-    "incomeType": "Cash",
-    "incomeNote": ""
-  },
-  {
-    "transactionType": "Income",
-    "incomeAmount": "1",
-    "incomeDate": "2024-12-31",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "transactionType": "Income",
-    "incomeAmount": "4321",
-    "incomeDate": "2024-12-31",
-    "incomeType": "Cash",
-    "incomeNote": ""
-  },
-  {
-    "transactionType": "Income",
-    "incomeAmount": "1",
-    "incomeDate": "2024-12-31",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 8,
-    "transactionType": "Income",
-    "incomeAmount": "098765432",
-    "incomeDate": "2024-12-31",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 9,
-    "transactionType": "Income",
-    "incomeAmount": "111",
-    "incomeDate": "2024-12-31",
-    "incomeType": "Cashless",
-    "incomeNote": "21"
-  },
-  {
-    "id": 10,
-    "transactionType": "Income",
-    "incomeAmount": "2222",
-    "incomeDate": "2024-12-31",
-    "incomeType": "Cash",
-    "incomeNote": ""
-  },
-  {
-    "id": 11,
+    "id": 2,
     "transactionType": "Expense",
-    "expenseAmount": "222",
-    "expenseDate": "2024-12-31",
-    "expenseType": "BT",
+    "category": "Housing",
+    "amount": "2111",
+    "date": "2025-01-01",
+    "expenseType": "Card",
     "expenseNote": ""
+  },
+  {
+    "id": 3,
+    "transactionType": "Income",
+    "category": "Salary",
+    "amount": "35000",
+    "date": "2025-01-01",
+    "incomeType": "Cashless",
+    "incomeNote": "Salary"
+  },
+  {
+    "id": 4,
+    "transactionType": "Expense",
+    "category": "Transportation",
+    "amount": "2333",
+    "date": "2025-01-01",
+    "expenseType": "Cash",
+    "expenseNote": "Refuel"
   }
 ]
