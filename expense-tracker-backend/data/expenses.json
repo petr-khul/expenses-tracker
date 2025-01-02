@@ -2,37 +2,19 @@
   {
     "id": 1,
     "transactionType": "Income",
-    "category": "Salary",
-    "amount": "20000",
-    "date": "2025-01-01",
+    "category": "Side hustle",
+    "amount": "3333",
+    "date": "2025-01-02",
     "incomeType": "Cashless",
     "incomeNote": ""
   },
   {
     "id": 2,
-    "transactionType": "Expense",
-    "category": "Housing",
-    "amount": "2111",
-    "date": "2025-01-01",
-    "expenseType": "Card",
-    "expenseNote": ""
-  },
-  {
-    "id": 3,
     "transactionType": "Income",
-    "category": "Salary",
-    "amount": "35000",
-    "date": "2025-01-01",
-    "incomeType": "Cashless",
-    "incomeNote": "Salary"
-  },
-  {
-    "id": 4,
-    "transactionType": "Expense",
-    "category": "Transportation",
-    "amount": "2333",
-    "date": "2025-01-01",
-    "expenseType": "Cash",
-    "expenseNote": "Refuel"
+    "category": "Gift",
+    "amount": "222",
+    "date": "2025-01-02",
+    "incomeType": "Cash",
+    "incomeNote": ""
   }
 ]

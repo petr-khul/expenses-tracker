@@ -9,7 +9,9 @@ function App() {
   const [expenses, setExpenses] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  let nextId = expenses.length + 1; // sets ID of next record and sends as a prop
+  // sets ID of next record and sends as a prop
+  let nextId = expenses.length > 0 
+  ? Math.max(...expenses.map(expense => expense.id)) + 1 : 1; 
 
 
   //load expenses from json file

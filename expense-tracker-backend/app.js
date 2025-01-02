@@ -53,8 +53,9 @@ app.post('/expenses', (req, res) => {
 });
 
 // DELETE expense based on ID
-app.delete("/expenses/id", (req, res) => {
+app.delete("/expenses/:id", (req, res) => {
   const expenseId = parseInt(req.params.id);
+  //console.log(`Received DELETE request for ID: ${expenseId}`);
 
   if (isNaN(expenseId)) {
     return res.status(400).send({ message: "Invalid ID format" });
