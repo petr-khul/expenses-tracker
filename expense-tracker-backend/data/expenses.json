@@ -1,29 +1,29 @@
 [
   {
-    "id": 3,
-    "transactionType": "Expense",
-    "category": "Transportation",
-    "amount": "3322",
-    "date": "2025-01-02",
-    "expenseType": "Card",
-    "expenseNote": ""
-  },
-  {
-    "id": 4,
+    "id": 6,
     "transactionType": "Income",
-    "category": "Side hustle",
-    "amount": "22222",
+    "category": "Business income",
+    "amount": "222",
     "date": "2025-01-02",
     "incomeType": "Cashless",
     "incomeNote": ""
   },
   {
-    "id": 5,
+    "id": 7,
     "transactionType": "Expense",
-    "category": "Health and Medical Expenses",
-    "amount": "32",
+    "category": "Transportation",
+    "amount": "222",
     "date": "2025-01-02",
     "expenseType": "Card",
     "expenseNote": ""
+  },
+  {
+    "id": 8,
+    "transactionType": "Income",
+    "category": "Gift",
+    "amount": "33",
+    "date": "2025-01-02",
+    "incomeType": "Cashless",
+    "incomeNote": ""
   }
 ]

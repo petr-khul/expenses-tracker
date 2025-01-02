@@ -14,12 +14,6 @@ function Income(props){
     const [incomeNote, setIncomeNote] = useState("");
     const [nextId, setNextId] = useState(records.length + 1);
 
-    //dynamically udpates the id
-    useEffect(() => {
-        setNextId(records.length + 1);
-    }, [records]);
-
-
     const handleIncomeCategoryChange = (event) => {
         setIncomeCategory(event.target.value);
     }
@@ -47,7 +41,7 @@ function Income(props){
 
         //creates new object to be added into array
         const newIncomeRecord = {
-            id: nextId,
+            id: props.nextId,
             transactionType: transactionType,
             category: incomeCategory,
             amount: incomeAmount,

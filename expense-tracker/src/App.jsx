@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import Income from "./Income";
 import Expense from "./Expense";
 import RecordsHistory from "./RecordsHistory";
 import Overview from "./Overview";
 import Statistics from "./Statistics";
 
-import './App.css'
+import './App.css';
 
 function App() {
   const [expenses, setExpenses] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [nextId, setNextId] = useState(1); // Use a state to manage nextId
 
-  // sets ID of next record and sends as a prop
-  let nextId = expenses.length > 0 
-  ? Math.max(...expenses.map(expense => expense.id)) + 1 : 1; 
-
-
-  //load expenses from json file
+  // Load expenses from json file
   useEffect(() => {
     fetch("http://localhost:3001/expenses")
       .then((response) => response.json())
@@ -35,45 +31,41 @@ function App() {
         setIsLoading(false);
       });
   }, []);
-  
 
-  //update after adding new record
+  // Recalculate nextId whenever expenses change
+  useEffect(() => {
+    if (expenses.length === 0) {
+      setNextId(1);
+    } else {
+      const maxId = Math.max(...expenses.map((expense) => expense.id)) + 1;
+      setNextId(maxId); // Update nextId based on the current expenses
+    }
+  }, [expenses]); // This effect runs whenever expenses change
+
+  // Update expenses state after adding a new record
   const updateExpenses = (newExpense) => {
     setExpenses((prevExpenses) => {
-      if (!Array.isArray(prevExpenses)) {
-        console.error("prevExpenses is not an array:", prevExpenses);
-        return [newExpense]; // Fallback to a new array
-      }
-
       return [...prevExpenses, newExpense];
     });
   };
 
-    // Delete an expense and update the state
-    const deleteExpense = (id) => {
-      // Send a DELETE request to the API
-      fetch(`http://localhost:3001/expenses/${id}`, {
-        method: 'DELETE',
+  // Delete an expense and update the state
+  const deleteExpense = (id) => {
+    fetch(`http://localhost:3001/expenses/${id}`, {
+      method: 'DELETE',
+    })
+      .then((response) => {
+        if (response.ok) {
+          // If the request was successful, remove the expense from the local state
+          setExpenses((prevExpenses) => prevExpenses.filter((expense) => expense.id !== id));
+        } else {
+          console.error("Failed to delete expense");
+        }
       })
-        .then((response) => {
-          if (response.ok) {
-            // If the request was successful, remove the expense from the local state
-            setExpenses((prevExpenses) => prevExpenses.filter((expense) => expense.id !== id));
-          } else {
-            console.error("Failed to delete expense");
-          }
-        })
-        .catch((error) => {
-          console.error("Error deleting expense:", error);
-        });
-    };
-
-  //log loaded expenses into console for debugging purposes
-  /*
-  useEffect(() => {
-    console.log(expenses);
-  }, [expenses]);
-  */
+      .catch((error) => {
+        console.error("Error deleting expense:", error);
+      });
+  };
 
   return (
     <>
@@ -82,17 +74,29 @@ function App() {
           <h1>💸 Cool Expense Tracker 💰</h1>
         </div>
         <div className="main-modules">
-          {!isLoading ? <Income expenses={expenses} updateExpenses={updateExpenses} id={nextId}/> : <p>Loading...</p>}
-          <Expense expenses={expenses} updateExpenses={updateExpenses} id={nextId}/>
+          {!isLoading ? (
+            <Income expenses={expenses} updateExpenses={updateExpenses} nextId={nextId} />
+          ) : (
+            <p>Loading...</p>
+          )}
+          <Expense expenses={expenses} updateExpenses={updateExpenses} nextId={nextId} />
           <Overview />
         </div>
         <div className="history-and-statistics">
-          {!isLoading ? <RecordsHistory expenses={expenses} updateExpenses={updateExpenses} deleteExpense={deleteExpense} /> : <p>Loading...</p>}
+          {!isLoading ? (
+            <RecordsHistory
+              expenses={expenses}
+              updateExpenses={updateExpenses}
+              deleteExpense={deleteExpense}
+            />
+          ) : (
+            <p>Loading...</p>
+          )}
           <Statistics />
         </div>
       </div>
     </>
-  )
+  );
 }
 
 export default App;
