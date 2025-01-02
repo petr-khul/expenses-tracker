@@ -1,14 +1,5 @@
 [
   {
-    "id": 1,
-    "transactionType": "Income",
-    "category": "Side hustle",
-    "amount": "3333",
-    "date": "2025-01-02",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
     "id": 3,
     "transactionType": "Expense",
     "category": "Transportation",
@@ -34,14 +25,5 @@
     "date": "2025-01-02",
     "expenseType": "Card",
     "expenseNote": ""
-  },
-  {
-    "id": 5,
-    "transactionType": "Income",
-    "category": "Pension or retirement",
-    "amount": "321",
-    "date": "2025-01-02",
-    "incomeType": "Cashless",
-    "incomeNote": ""
   }
 ]

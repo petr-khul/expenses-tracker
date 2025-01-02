@@ -3,6 +3,7 @@ import Income from "./Income";
 import Expense from "./Expense";
 import RecordsHistory from "./RecordsHistory";
 import Overview from "./Overview";
+import Statistics from "./Statistics";
 
 import './App.css'
 
@@ -83,10 +84,11 @@ function App() {
         <div className="main-modules">
           {!isLoading ? <Income expenses={expenses} updateExpenses={updateExpenses} id={nextId}/> : <p>Loading...</p>}
           <Expense expenses={expenses} updateExpenses={updateExpenses} id={nextId}/>
-          <Overview/>
+          <Overview />
         </div>
         <div className="history-and-statistics">
           {!isLoading ? <RecordsHistory expenses={expenses} updateExpenses={updateExpenses} deleteExpense={deleteExpense} /> : <p>Loading...</p>}
+          <Statistics />
         </div>
       </div>
     </>
