@@ -80,7 +80,7 @@ function App() {
             <p>Loading...</p>
           )}
           <Expense expenses={expenses} updateExpenses={updateExpenses} nextId={nextId} />
-          <Overview />
+          <Overview expenses={expenses} updateExpenses={updateExpenses} />
         </div>
         <div className="history-and-statistics">
           {!isLoading ? (

@@ -85,3 +85,7 @@ ul li {
 ul li:last-child {
     border-bottom: none; /* Remove separator after the last item */
 }
+
+.deleteButton {
+    cursor: pointer;
+}

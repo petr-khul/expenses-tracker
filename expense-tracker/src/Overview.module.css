@@ -14,3 +14,15 @@
     text-align: center;
     min-height: 450px;
 }
+
+.overview ul {
+    padding: 0;
+}
+
+.overview ul li {
+    text-align: left;
+    list-style-type: none;
+    padding-bottom: 10px; 
+    padding-top: 10px;
+    text-transform: none;
+}

@@ -1,29 +1,65 @@
 [
   {
-    "id": 6,
-    "transactionType": "Income",
-    "category": "Business income",
-    "amount": "222",
-    "date": "2025-01-02",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 7,
+    "id": 12,
     "transactionType": "Expense",
-    "category": "Transportation",
-    "amount": "222",
+    "category": "Health and Medical Expenses",
+    "amount": "1999",
     "date": "2025-01-02",
     "expenseType": "Card",
     "expenseNote": ""
   },
   {
-    "id": 8,
+    "id": 14,
+    "transactionType": "Expense",
+    "category": "Transportation",
+    "amount": "222",
+    "date": "2025-01-02",
+    "expenseType": "",
+    "expenseNote": ""
+  },
+  {
+    "id": 15,
+    "transactionType": "Expense",
+    "category": "Housing",
+    "amount": "1",
+    "date": "2025-01-02",
+    "expenseType": "BT",
+    "expenseNote": ""
+  },
+  {
+    "id": 16,
     "transactionType": "Income",
-    "category": "Gift",
-    "amount": "33",
+    "category": "Salary",
+    "amount": "1000",
     "date": "2025-01-02",
     "incomeType": "Cashless",
     "incomeNote": ""
+  },
+  {
+    "id": 17,
+    "transactionType": "Income",
+    "category": "Side hustle",
+    "amount": "1222",
+    "date": "2025-01-02",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "id": 18,
+    "transactionType": "Income",
+    "category": "Side hustle",
+    "amount": "100",
+    "date": "2025-01-02",
+    "incomeType": "Cash",
+    "incomeNote": ""
+  },
+  {
+    "id": 19,
+    "transactionType": "Expense",
+    "category": "Housing",
+    "amount": "1000",
+    "date": "2025-01-02",
+    "expenseType": "Card",
+    "expenseNote": ""
   }
 ]
