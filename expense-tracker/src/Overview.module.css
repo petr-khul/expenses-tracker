@@ -1,0 +1,16 @@
+.overview {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid hsla(0, 0%, 30%, 0.9);
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    flex-grow: 1; 
+    justify-content: flex-start;
+    padding: 10px 30px;
+    margin: 10px;
+    margin-right: 0px;
+    background-color: hsla(234, 90%, 35%, 0.1);
+    text-align: center;
+    min-height: 450px;
+}

@@ -9,12 +9,39 @@
     "incomeNote": ""
   },
   {
-    "id": 2,
-    "transactionType": "Income",
-    "category": "Gift",
-    "amount": "222",
+    "id": 3,
+    "transactionType": "Expense",
+    "category": "Transportation",
+    "amount": "3322",
     "date": "2025-01-02",
-    "incomeType": "Cash",
+    "expenseType": "Card",
+    "expenseNote": ""
+  },
+  {
+    "id": 4,
+    "transactionType": "Income",
+    "category": "Side hustle",
+    "amount": "22222",
+    "date": "2025-01-02",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "id": 5,
+    "transactionType": "Expense",
+    "category": "Health and Medical Expenses",
+    "amount": "32",
+    "date": "2025-01-02",
+    "expenseType": "Card",
+    "expenseNote": ""
+  },
+  {
+    "id": 5,
+    "transactionType": "Income",
+    "category": "Pension or retirement",
+    "amount": "321",
+    "date": "2025-01-02",
+    "incomeType": "Cashless",
     "incomeNote": ""
   }
 ]

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Income from "./Income";
 import Expense from "./Expense";
+import RecordsHistory from "./RecordsHistory";
 import Overview from "./Overview";
 
 import './App.css'
@@ -65,8 +66,6 @@ function App() {
           console.error("Error deleting expense:", error);
         });
     };
-  
-
 
   //log loaded expenses into console for debugging purposes
   /*
@@ -74,7 +73,6 @@ function App() {
     console.log(expenses);
   }, [expenses]);
   */
-  
 
   return (
     <>
@@ -85,7 +83,10 @@ function App() {
         <div className="main-modules">
           {!isLoading ? <Income expenses={expenses} updateExpenses={updateExpenses} id={nextId}/> : <p>Loading...</p>}
           <Expense expenses={expenses} updateExpenses={updateExpenses} id={nextId}/>
-          {!isLoading ? <Overview expenses={expenses} updateExpenses={updateExpenses} deleteExpense={deleteExpense} /> : <p>Loading...</p>}
+          <Overview/>
+        </div>
+        <div className="history-and-statistics">
+          {!isLoading ? <RecordsHistory expenses={expenses} updateExpenses={updateExpenses} deleteExpense={deleteExpense} /> : <p>Loading...</p>}
         </div>
       </div>
     </>
