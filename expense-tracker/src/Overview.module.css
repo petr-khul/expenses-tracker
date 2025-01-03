@@ -12,6 +12,7 @@
     background-color: hsla(234, 90%, 35%, 0.1);
     text-align: center;
     min-height: 450px;
+    flex-wrap: nowrap;
 }
 
 .overview h3 {
@@ -28,6 +29,7 @@
     display: flex;
     justify-content: space-between;
     text-transform: none;
+    flex-wrap: nowrap;
 }
 
 hr {

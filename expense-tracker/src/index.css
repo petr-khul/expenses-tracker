@@ -16,5 +16,12 @@
   justify-content: center;
 }
 
+@media (min-width: 1360){
+:root {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 
