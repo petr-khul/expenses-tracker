@@ -61,5 +61,104 @@
     "date": "2025-01-02",
     "expenseType": "Card",
     "expenseNote": ""
+  },
+  {
+    "id": 21,
+    "transactionType": "Income",
+    "category": "Salary",
+    "amount": "123",
+    "date": "2025-01-03",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "id": 22,
+    "transactionType": "Income",
+    "category": "Gift",
+    "amount": "222",
+    "date": "2025-01-03",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "id": 23,
+    "transactionType": "Income",
+    "category": "Salary",
+    "amount": "10000",
+    "date": "2025-01-03",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "id": 24,
+    "transactionType": "Expense",
+    "category": "Insurance",
+    "amount": "2222",
+    "date": "2025-01-03",
+    "expenseType": "Card",
+    "expenseNote": ""
+  },
+  {
+    "id": 25,
+    "transactionType": "Income",
+    "category": "Pension or retirement",
+    "amount": "10000",
+    "date": "2024-12-30",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "id": 26,
+    "transactionType": "Income",
+    "category": "Gift",
+    "amount": "100",
+    "date": "2025-01-03",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "id": 27,
+    "transactionType": "Income",
+    "category": "Salary",
+    "amount": "100",
+    "date": "2025-01-03",
+    "incomeType": "Cashless",
+    "incomeNote": ""
+  },
+  {
+    "id": 28,
+    "transactionType": "Expense",
+    "category": "Transportation",
+    "amount": "1000",
+    "date": "2024-12-30",
+    "expenseType": "Card",
+    "expenseNote": ""
+  },
+  {
+    "id": 29,
+    "transactionType": "Expense",
+    "category": "Health and Medical Expenses",
+    "amount": "2000",
+    "date": "2025-02-03",
+    "expenseType": "Card",
+    "expenseNote": ""
+  },
+  {
+    "id": 30,
+    "transactionType": "Expense",
+    "category": "Health and Medical Expenses",
+    "amount": "200",
+    "date": "2024-10-28",
+    "expenseType": "BT",
+    "expenseNote": ""
+  },
+  {
+    "id": 31,
+    "transactionType": "Income",
+    "category": "Side hustle",
+    "amount": "500",
+    "date": "2024-07-29",
+    "incomeType": "Cashless",
+    "incomeNote": ""
   }
 ]
