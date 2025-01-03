@@ -6,7 +6,7 @@ function RecordsHistory({ expenses, deleteExpense }){
     const sortedExpenses = expenses.sort((a, b) => new Date(b.date) - new Date(a.date));
     
     return(
-        <div className={styles.overviewHistory} style={{ maxHeight: "400px", overflowY: "auto" }}>
+        <div className={styles.recordsHistory} style={{ maxHeight: "400px", overflowY: "auto" }}>
             <h3 className={styles.boxHeader}>Records history</h3>
             <ul>
                 {sortedExpenses.map((expense) => (

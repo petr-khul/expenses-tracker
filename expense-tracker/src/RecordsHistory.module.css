@@ -1,4 +1,4 @@
-.overviewHistory {
+.recordsHistory {
     display: flex;
     flex-direction: column;
     border: 1px solid hsla(0, 0%, 30%, 0.9);
@@ -16,25 +16,25 @@
     width: 50%;
 }
 
-.overviewHistory::-webkit-scrollbar {
+.recordsHistory::-webkit-scrollbar {
     width: 8px; /* Width of the vertical scrollbar */
     height: 8px; /* Height of the horizontal scrollbar */
   }
   
   /* Style the track (the area the scrollbar slides within) */
-  .overviewHistory::-webkit-scrollbar-track {
+.recordsHistory::-webkit-scrollbar-track {
     background: #f1f1f1; /* Light grey background */
     border-radius: 10px;
   }
   
   /* Style the handle (the draggable part of the scrollbar) */
-  .overviewHistory::-webkit-scrollbar-thumb {
+.recordsHistory::-webkit-scrollbar-thumb {
     background: #888; /* Darker grey for the scrollbar thumb */
     border-radius: 10px;
   }
   
   /* Style the handle on hover */
-  .overviewHistory::-webkit-scrollbar-thumb:hover {
+.recordsHistory::-webkit-scrollbar-thumb:hover {
     background: #555; /* Darker grey when hovered */
   }
 
@@ -55,12 +55,12 @@
     font-weight: bolder;
 }
 
-.overviewHistory ul {
+.recordsHistory ul {
     padding: 0 10px;
     margin: 0; 
 }
 
-.overviewHistory ul li {
+.recordsHistory ul li {
     text-align: justify;
     text-transform: none;
     list-style-type: none;
@@ -69,20 +69,20 @@
     justify-content: space-between;
 }
 
-ul li:first-child {
+.recordsHistory ul li:first-child {
     border-bottom: 1px solid #ccc; /* Separator line after each item */
     padding-bottom: 10px; /* Adjust space after the content */
     padding-top: 0;
 }
 
-ul li {
+.recordsHistory ul li {
     border-bottom: 1px solid #ccc; /* Separator line after each item */
     padding-bottom: 10px; /* Adjust space after the content */
     padding-top: 10px;
 }
 
   
-ul li:last-child {
+.recordsHistory ul li:last-child {
     border-bottom: none; /* Remove separator after the last item */
 }
 
