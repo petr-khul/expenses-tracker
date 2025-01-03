@@ -34,7 +34,7 @@ function Expense(props) {
 
   const handleExpenseSubmit = (event) => {
     event.preventDefault();
-    const transactionType = "Expense"; // default transaction type for incomes
+    const transactionType = "Expense"; // default transaction type for expenses
 
     // Create new object to be added into the array
     const newExpenseRecord = {

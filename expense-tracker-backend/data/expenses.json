@@ -54,15 +54,6 @@
     "note": "Christmas gifts"
   },
   {
-    "id": 7,
-    "transactionType": "Income",
-    "category": "Side hustle",
-    "amount": "3000",
-    "date": "2025-01-03",
-    "type": "Cash",
-    "note": "Laptop repair"
-  },
-  {
     "id": 8,
     "transactionType": "Income",
     "category": "Business income",
@@ -97,5 +88,41 @@
     "date": "2025-01-03",
     "type": "Cashless",
     "note": "Test"
+  },
+  {
+    "id": 12,
+    "transactionType": "Income",
+    "category": "Side hustle",
+    "amount": "3000",
+    "date": "2025-01-03",
+    "type": "Cash",
+    "note": "Gift from wife"
+  },
+  {
+    "id": 13,
+    "transactionType": "Expense",
+    "category": "Insurance",
+    "amount": "1000",
+    "date": "2025-01-03",
+    "type": "BT",
+    "note": "Flat insurance"
+  },
+  {
+    "id": 15,
+    "transactionType": "Expense",
+    "category": "Housing",
+    "amount": "10000",
+    "date": "2025-01-17",
+    "type": "BT",
+    "note": "Flat"
+  },
+  {
+    "id": 16,
+    "transactionType": "Expense",
+    "category": "Transportation",
+    "amount": "2000",
+    "date": "2025-01-03",
+    "type": "Card",
+    "note": "Car refuel"
   }
 ]

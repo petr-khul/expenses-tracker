@@ -20,6 +20,7 @@ function RecordsHistory({ expenses, deleteExpense }) {
     return monthMatch && yearMatch && typeMatch && categoryMatch;
   });
 
+  //sort expenses by date
   const sortedExpenses = filteredExpenses.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   // Calculate total income and expense

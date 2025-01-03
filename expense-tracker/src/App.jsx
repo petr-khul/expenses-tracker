@@ -3,8 +3,6 @@ import Income from "./Income";
 import Expense from "./Expense";
 import RecordsHistory from "./RecordsHistory";
 import Overview from "./Overview";
-import Statistics from "./Statistics";
-
 import './App.css';
 
 function App() {

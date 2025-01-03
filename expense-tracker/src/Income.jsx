@@ -12,7 +12,6 @@ function Income(props){
     const [incomeDate, setIncomeDate] = useState(today);
     const [incomeType, setIncomeType] = useState("");
     const [incomeNote, setIncomeNote] = useState("");
-    const [nextId, setNextId] = useState(records.length + 1);
 
     const handleIncomeCategoryChange = (event) => {
         setIncomeCategory(event.target.value);
