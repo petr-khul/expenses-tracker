@@ -13,30 +13,8 @@
     background-color: hsla(234, 90%, 35%, 0.1);
     text-align: center;
     min-height: 450px;
-    width: 50%;
+    width: 100%;
 }
-
-.recordsHistory::-webkit-scrollbar {
-    width: 8px; /* Width of the vertical scrollbar */
-    height: 8px; /* Height of the horizontal scrollbar */
-  }
-  
-  /* Style the track (the area the scrollbar slides within) */
-.recordsHistory::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Light grey background */
-    border-radius: 10px;
-  }
-  
-  /* Style the handle (the draggable part of the scrollbar) */
-.recordsHistory::-webkit-scrollbar-thumb {
-    background: #888; /* Darker grey for the scrollbar thumb */
-    border-radius: 10px;
-  }
-  
-  /* Style the handle on hover */
-.recordsHistory::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Darker grey when hovered */
-  }
 
 .boxHeader {
     display: flex;
@@ -89,3 +67,63 @@
 .deleteButton {
     cursor: pointer;
 }
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0;
+  }
+  
+  .filters select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .totals {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-transform: none;
+    font-weight: bolder;
+  }
+
+  .totals p {
+    margin: 15px 10px;
+  }
+
+.incomeFormat {
+    color: hsla(120, 100%, 50%, 0.5);
+}
+
+.expenseFormat {
+    color: hsla(0, 100%, 55%, 0.6);
+}
+
+  .records {
+    overflow-y: auto;
+  }
+
+  .records::-webkit-scrollbar {
+    width: 8px; /* Width of the vertical scrollbar */
+    height: 8px; /* Height of the horizontal scrollbar */
+  }
+  
+  /* Style the track (the area the scrollbar slides within) */
+.records::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey background */
+    border-radius: 10px;
+  }
+  
+  /* Style the handle (the draggable part of the scrollbar) */
+.records::-webkit-scrollbar-thumb {
+    background: #888; /* Darker grey for the scrollbar thumb */
+    border-radius: 10px;
+  }
+  
+  /* Style the handle on hover */
+.records::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker grey when hovered */
+  }

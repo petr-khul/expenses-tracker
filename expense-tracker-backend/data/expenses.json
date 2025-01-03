@@ -1,164 +1,101 @@
 [
   {
-    "id": 12,
+    "id": 1,
+    "transactionType": "Income",
+    "category": "Salary",
+    "amount": "100000",
+    "date": "2024-12-15",
+    "type": "Cashless",
+    "note": "December salary"
+  },
+  {
+    "id": 2,
     "transactionType": "Expense",
     "category": "Health and Medical Expenses",
-    "amount": "1999",
-    "date": "2025-01-02",
-    "expenseType": "Card",
-    "expenseNote": ""
-  },
-  {
-    "id": 14,
-    "transactionType": "Expense",
-    "category": "Transportation",
-    "amount": "222",
-    "date": "2025-01-02",
-    "expenseType": "",
-    "expenseNote": ""
-  },
-  {
-    "id": 15,
-    "transactionType": "Expense",
-    "category": "Housing",
-    "amount": "1",
-    "date": "2025-01-02",
-    "expenseType": "BT",
-    "expenseNote": ""
-  },
-  {
-    "id": 16,
-    "transactionType": "Income",
-    "category": "Salary",
-    "amount": "1000",
-    "date": "2025-01-02",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 17,
-    "transactionType": "Income",
-    "category": "Side hustle",
-    "amount": "1222",
-    "date": "2025-01-02",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 18,
-    "transactionType": "Income",
-    "category": "Side hustle",
-    "amount": "100",
-    "date": "2025-01-02",
-    "incomeType": "Cash",
-    "incomeNote": ""
-  },
-  {
-    "id": 19,
-    "transactionType": "Expense",
-    "category": "Housing",
-    "amount": "1000",
-    "date": "2025-01-02",
-    "expenseType": "Card",
-    "expenseNote": ""
-  },
-  {
-    "id": 21,
-    "transactionType": "Income",
-    "category": "Salary",
-    "amount": "123",
-    "date": "2025-01-03",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 22,
-    "transactionType": "Income",
-    "category": "Gift",
-    "amount": "222",
-    "date": "2025-01-03",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 23,
-    "transactionType": "Income",
-    "category": "Salary",
-    "amount": "10000",
-    "date": "2025-01-03",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 24,
-    "transactionType": "Expense",
-    "category": "Insurance",
-    "amount": "2222",
-    "date": "2025-01-03",
-    "expenseType": "Card",
-    "expenseNote": ""
-  },
-  {
-    "id": 25,
-    "transactionType": "Income",
-    "category": "Pension or retirement",
-    "amount": "10000",
-    "date": "2024-12-30",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 26,
-    "transactionType": "Income",
-    "category": "Gift",
-    "amount": "100",
-    "date": "2025-01-03",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 27,
-    "transactionType": "Income",
-    "category": "Salary",
-    "amount": "100",
-    "date": "2025-01-03",
-    "incomeType": "Cashless",
-    "incomeNote": ""
-  },
-  {
-    "id": 28,
-    "transactionType": "Expense",
-    "category": "Transportation",
-    "amount": "1000",
-    "date": "2024-12-30",
-    "expenseType": "Card",
-    "expenseNote": ""
-  },
-  {
-    "id": 29,
-    "transactionType": "Expense",
-    "category": "Health and Medical Expenses",
-    "amount": "2000",
-    "date": "2025-02-03",
-    "expenseType": "Card",
-    "expenseNote": ""
-  },
-  {
-    "id": 30,
-    "transactionType": "Expense",
-    "category": "Health and Medical Expenses",
-    "amount": "200",
-    "date": "2024-10-28",
-    "expenseType": "BT",
-    "expenseNote": ""
-  },
-  {
-    "id": 31,
-    "transactionType": "Income",
-    "category": "Side hustle",
     "amount": "500",
-    "date": "2024-07-29",
-    "incomeType": "Cashless",
-    "incomeNote": ""
+    "date": "2024-12-17",
+    "type": "Cash",
+    "note": "Pharmacy"
+  },
+  {
+    "id": 3,
+    "transactionType": "Income",
+    "category": "Gift",
+    "amount": "5000",
+    "date": "2024-12-24",
+    "type": "Cash",
+    "note": "Christmas gift"
+  },
+  {
+    "id": 4,
+    "transactionType": "Expense",
+    "category": "Transportation",
+    "amount": "1600",
+    "date": "2024-12-19",
+    "type": "Card",
+    "note": "Car refuel"
+  },
+  {
+    "id": 5,
+    "transactionType": "Expense",
+    "category": "Housing",
+    "amount": "15000",
+    "date": "2024-12-17",
+    "type": "BT",
+    "note": "Flat payments"
+  },
+  {
+    "id": 6,
+    "transactionType": "Expense",
+    "category": "Gifts and Donations",
+    "amount": "13000",
+    "date": "2025-01-20",
+    "type": "Cash",
+    "note": "Christmas gifts"
+  },
+  {
+    "id": 7,
+    "transactionType": "Income",
+    "category": "Side hustle",
+    "amount": "3000",
+    "date": "2025-01-03",
+    "type": "Cash",
+    "note": "Laptop repair"
+  },
+  {
+    "id": 8,
+    "transactionType": "Income",
+    "category": "Business income",
+    "amount": "3000",
+    "date": "2024-12-31",
+    "type": "Cash",
+    "note": "Divident"
+  },
+  {
+    "id": 9,
+    "transactionType": "Expense",
+    "category": "Food and Groceries",
+    "amount": "2000",
+    "date": "2024-12-23",
+    "type": "Card",
+    "note": "Food for Christmas"
+  },
+  {
+    "id": 10,
+    "transactionType": "Expense",
+    "category": "Entertainment and Leisure",
+    "amount": "400",
+    "date": "2025-01-03",
+    "type": "Card",
+    "note": "Netflix subscription"
+  },
+  {
+    "id": 11,
+    "transactionType": "Income",
+    "category": "Side hustle",
+    "amount": "100",
+    "date": "2025-01-03",
+    "type": "Cashless",
+    "note": "Test"
   }
 ]

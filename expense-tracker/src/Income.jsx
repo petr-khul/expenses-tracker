@@ -46,8 +46,8 @@ function Income(props){
             category: incomeCategory,
             amount: incomeAmount,
             date: incomeDate,
-            incomeType: incomeType,
-            incomeNote: incomeNote
+            type: incomeType,
+            note: incomeNote
         }
         
         // log to console for debugging purposes

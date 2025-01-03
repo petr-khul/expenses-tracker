@@ -92,7 +92,6 @@ function App() {
           ) : (
             <p>Loading...</p>
           )}
-          <Statistics />
         </div>
       </div>
     </>

@@ -43,8 +43,8 @@ function Expense(props) {
       category: expenseCategory,
       amount: expenseAmount,
       date: expenseDate,
-      expenseType: expenseType,
-      expenseNote: expenseNote,
+      type: expenseType,
+      note: expenseNote,
     };
 
     // Log to console for debugging purposes
